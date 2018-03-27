@@ -10,8 +10,7 @@ import com.example.aaronbrecher.shoppinglistkotlin.dependencyInjection.RoomModul
  * Created by aaronbrecher on 3/26/18.
  */
 class ShoppingListApplication : Application() {
-    private lateinit var appComponent: AppComponent
-
+    lateinit var appComponent: AppComponent
     override fun onCreate() {
         super.onCreate()
         app = this

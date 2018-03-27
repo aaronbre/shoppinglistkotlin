@@ -39,8 +39,8 @@ dependencies {
     implementation "android.arch.persistence.room:runtime:1.0.0"
     kapt "android.arch.persistence.room:compiler:1.0.0"
 
-    //Live Data
-    implementation "android.arch.lifecycle:livedata:1.1.1"
+    //Live Data & ViewModel
+    implementation "android.arch.lifecycle:extensions:1.1.1"
 
     //dagger2
     implementation 'com.google.dagger:dagger:2.13'
