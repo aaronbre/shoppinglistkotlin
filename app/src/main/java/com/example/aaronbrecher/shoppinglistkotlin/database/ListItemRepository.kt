@@ -26,8 +26,8 @@ constructor(private val listItemDao: ListItemDao) {
         listItemDao.insertAll(items)
     }
 
-    fun insertListItem(item: ListItem) {
-        listItemDao.insertItem(item)
+    fun insertListItem(item: ListItem): Long {
+        return listItemDao.insertItem(item)
     }
 
     fun deleteItem(item: ListItem) {

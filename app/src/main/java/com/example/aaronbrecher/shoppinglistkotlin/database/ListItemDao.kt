@@ -14,7 +14,7 @@ interface ListItemDao{
     fun insertAll(items: List<ListItem>)
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    fun insertItem(item: ListItem)
+    fun insertItem(item: ListItem): Long
 
     @Query("SELECT * FROM items WHERE id = :id")
     fun findById(id: Int) : LiveData<ListItem>

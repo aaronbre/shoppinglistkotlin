@@ -9,8 +9,7 @@ import javax.inject.Inject
 /**
  * Created by aaronbrecher on 3/26/18.
  */
-class ListsViewModel @Inject
-constructor(private val repository: ShoppingListRepository) : ViewModel() {
+class ListsViewModel(private val repository: ShoppingListRepository) : ViewModel() {
 
     fun getShoppingLists(): LiveData<List<ShoppingList>> {
         return repository.getAllShoppingLists()

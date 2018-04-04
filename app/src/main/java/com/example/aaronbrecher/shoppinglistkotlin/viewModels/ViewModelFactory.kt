@@ -18,6 +18,12 @@ constructor(val listItemRepository: ListItemRepository,
     override fun <T : ViewModel?> create(modelClass: Class<T>): T {
         if(modelClass.isAssignableFrom(ListsViewModel::class.java))
             return ListsViewModel(shoppingListRepository) as T
+        else if(modelClass.isAssignableFrom(NewListViewModel::class.java))
+            return NewListViewModel(shoppingListRepository) as T
+        else if(modelClass.isAssignableFrom(ListDetailViewModel::class.java))
+            return ListDetailViewModel(shoppingListRepository, listItemRepository) as T
+        else if(modelClass.isAssignableFrom(EditListViewModel::class.java))
+            return EditListViewModel(listItemRepository, sharedPreferences) as T
         else
             throw IllegalArgumentException("ViewModel not found")
     }

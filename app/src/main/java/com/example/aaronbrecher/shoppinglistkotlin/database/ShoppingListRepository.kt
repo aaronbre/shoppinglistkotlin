@@ -15,8 +15,8 @@ constructor(private val shoppingListDao: ShoppingListDao) {
         shoppingListDao.insertAll(lists)
     }
 
-    fun insertList(list: ShoppingList){
-        shoppingListDao.insertList(list)
+    fun insertList(list: ShoppingList): Long{
+        return shoppingListDao.insertList(list)
     }
 
     fun getAllShoppingLists(): LiveData<List<ShoppingList>>{
